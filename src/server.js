@@ -13,9 +13,10 @@ app.use(express.json());
 //Routes 
 import {router as healthcheckRouter} from './routes/healthcheck.route.js'
 import {router as userRouter} from './routes/user.route.js'
-
+import {router as blogRouter} from './routes/blogs.route.js'
 
 app.use('/api/v1', healthcheckRouter)
+app.use('/api/v1', blogRouter)
 app.use('/api/v1/auth', userRouter)
 
 
